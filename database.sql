@@ -1,4 +1,4 @@
---database name redux-pizza-parlor
+--database name redux_pizza_parlor
 
 CREATE TABLE "pizza" (
 	"id" SERIAL PRIMARY KEY,
