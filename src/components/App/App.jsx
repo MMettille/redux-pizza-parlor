@@ -19,7 +19,7 @@ function App() {
   return (
     <Router>
       <div className='App'>
-        <header className='App-header'>
+      <header className='App-header'>
           <h1 className='App-title'>Prime Pizza</h1>
         </header>
     
@@ -30,7 +30,6 @@ function App() {
     
         <Route path="/" exact>
             <PizzaList />
-                <PizzaItem />
         </Route>
 
         <Route path="/customerInfo">
@@ -48,6 +47,7 @@ function App() {
           <AdminList />
             {/* <AdminListItem /> */}
             </Route>
+
             
       </div>
     </Router>
