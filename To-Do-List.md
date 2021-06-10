@@ -3,8 +3,8 @@
 [ ] need to store customer info
 
 [ Home ] - Chris
-    [ ] Display the options
-        [ ] GET REQUEST
+    [x] Display the options
+        [x] GET REQUEST
     [ ] Adding a pizza to the cart (BUTTON)
         [ ] Client facing -> that needs to go to redux in a store
          - Needs to be an array of objects of: *, *name*, *description*, *image_path* and *cost* properties. 
@@ -18,10 +18,10 @@
     [ ] Grab the inputs and selection for delivery, save the inputs in redux
     [ ] Next button -> will navigate you to step #3 and save to redux
 [ checkout ] - Oliva
-    [ ] Grab the customers info and display on left
-    [ ] Grab the customers delivery selection and display on right
-    [ ] Make a table for menu selection and price
-        [ ] headers: *name* and *cost*
+    [X] Grab the customers info and display on left
+    [X] Grab the customers delivery selection and display on right
+    [X] Make a table for menu selection and price
+        [X] headers: *name* and *cost*
     [ ] Display the total of their cart
     [ ] On Checkout button click:
         [ ] Show confirmation

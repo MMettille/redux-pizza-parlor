@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import CheckoutListItem from '../CheckoutListItem/CheckoutListItem'
+// import CheckoutListItem from '../CheckoutListItem/CheckoutListItem'
 
 
 function CheckoutList() {
@@ -11,6 +11,12 @@ function CheckoutList() {
     return (
         <>
             <h2>Checkout</h2>
+            <div>
+                <p>{customerInfo.customer_name}</p>
+                <p>{customerInfo.street_address}</p>
+                <p>{customerInfo.city}, MN {customerInfo.zip}</p>
+                <p>For {customerInfo.type}</p>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -30,7 +36,8 @@ function CheckoutList() {
                 </tbody>
 
             </table>
-
+            <h3>Total: </h3>
+            <button>CHECKOUT</button>
 
         </>
     )

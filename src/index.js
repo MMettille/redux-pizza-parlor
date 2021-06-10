@@ -9,6 +9,15 @@ import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 
 // ⬇ The Reducers
+
+const pizzas = (state =[], action) => {
+  if(action.type === 'SHOW_PIZZAS') {
+    console.log(action.payload);
+    return action.payload;
+  }
+  return state;
+}
+
 const customerOrder = (state = [], action) => {
   if(action.type === 'ADD_PIZZA'){
       console.log(action.payload)
@@ -41,7 +50,7 @@ const customerInfo = (state = [], action) => {
 const store = createStore(
     combineReducers({
       // ⬇ Reducers go here
-      customerOrder, customerInfo
+      customerOrder, customerInfo, pizzas
     }),
     applyMiddleware(
       logger
