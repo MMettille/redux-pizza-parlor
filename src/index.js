@@ -34,6 +34,8 @@ const customerOrder = (state = [], action) => {
   return state;
 }
 
+
+
 const customerInfo = (state = [], action) => {
   if(action.type === 'ADD_CUSTOMER'){
     console.log(action.payload)
