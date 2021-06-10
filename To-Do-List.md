@@ -34,7 +34,7 @@
         
 [ admin ] - James
 !!! - user will need to go to localhost:3000/admin
-    [ ] Will need to make a get route to './admin'
+    [  ] Will need to make a get route to './admin'
     [ ] Create table - headers: *name*, *Time Order Placed*, *Type* (delivery or pickup), and *Cost*
 
 [ total ??? ] - James
