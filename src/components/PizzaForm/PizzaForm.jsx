@@ -16,6 +16,8 @@ function PizzaForm (){
         <form>
             <h3>Step 2: Customer Information</h3>
             <div>
+                <form>
+                    <div>
                 <Textfield
                     required
                     id="outline-required"
@@ -44,6 +46,11 @@ function PizzaForm (){
                     placeholder="Zip Code"
                     variant="outlined"
                 />
+                </div>
+                <RadioGroup>
+
+                </RadioGroup>
+                </form>
             </div>
             <div>
                 
