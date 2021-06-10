@@ -1,16 +1,13 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import AdminListItem from "../AdminListItem/AdminListItem";
 
-
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
 
 function AdminList() {
   // pseudo code
@@ -35,24 +32,31 @@ function AdminList() {
   }, []);
 
   return (
-    <div>
-      <table>
-        <thead>
-          <th>Name</th>
-          <th>Time Order Placed</th>
-          <th>Type</th>
-          <th>Cost</th>
-        </thead>
-        <tbody>
-          <tr>
-            {customerOrders.map((order, i) => {
-              return <AdminListItem key={i} order={order} />;
-            })}
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <TableContainer component={Paper}>
+      <Table aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>Time Order Placed</TableCell>
+            <TableCell>Type</TableCell>
+            <TableCell>Cost</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {customerOrders.map((order, i) => (
+            <TableRow key={i}>
+              <TableCell>{order.customer_name}</TableCell>
+              <TableCell>{order.time}</TableCell>
+              <TableCell>{order.type}</TableCell>
+              <TableCell>{order.total}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 }
 
 export default AdminList;
+
+// <AdminListItem key={i} order={order} />;
