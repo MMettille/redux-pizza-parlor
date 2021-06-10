@@ -12,10 +12,12 @@ function PizzaListItem({foodItem}) {
     return (
         <div>
             {/* put these in tags of choice for looks */}
-            <p>{foodItem.name}
-            {foodItem.description}
-            {foodItem.price}
-            {foodItem.image_path}</p>
+            <h3>{foodItem.name}</h3>
+            <p>{foodItem.description}</p>
+            <p>{foodItem.price}</p>
+            
+            
+            <img src={foodItem.image_path} />
 
             <button type="submit">Add Pizza</button>
 
