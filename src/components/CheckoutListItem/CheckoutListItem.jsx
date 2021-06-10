@@ -1,9 +1,7 @@
-
-function CheckoutListItem () {
+function CheckoutListItem() {
 
     return(
         <>
-        <h3>checkout item</h3>
         </>
     )
 }

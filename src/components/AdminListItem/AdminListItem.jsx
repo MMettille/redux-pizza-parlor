@@ -1,1 +1,9 @@
-import AdminListItem from '../AdminList';
+function AdminListItem() {
+
+    return(
+        <>
+        </>
+    )
+}
+
+export default AdminListItem

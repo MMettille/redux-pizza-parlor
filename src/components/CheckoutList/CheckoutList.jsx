@@ -1,13 +1,11 @@
-import CheckoutListItem from '../CheckoutList/CheckoutList';
+import CheckoutListItem from '../CheckoutListItem/CheckoutListItem'
 
-function CheckoutList () {
+function CheckoutList() {
 
     return(
         <>
-        <h2>Checkout</h2>
-        <CheckoutListItem />
         </>
     )
 }
 
-export default CheckoutList;
+export default CheckoutList
