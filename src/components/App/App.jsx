@@ -24,7 +24,7 @@ function App() {
         <img src="images/pizza_photo.png" />
         <p>Pizza is great.</p>
 
-        {/* <Header />
+        <Header />
     
         <Route path="/" exact>
             <PizzaList />
@@ -35,15 +35,11 @@ function App() {
         </Route>
 
         <Route path="/checkout">
-            <CheckoutList />
-                <CheckoutListItem />
-            
-            <Checkout />
-        </Route> */}
+            <CheckoutList />  
+        </Route>
 
         <Route path="/admin">
           <AdminList />
-          {/* <AdminListItem /> */}
         </Route>
       </div>
     </Router>
