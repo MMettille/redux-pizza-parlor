@@ -64,10 +64,11 @@ function App() {
         <Route path="/checkout">
             <CheckoutList />  
         </Route>
-
-        <Route path="/admin">
+            
+        <Route path='/admin'>
           <AdminList />
-        </Route>
+            </Route>
+            
       </div>
     </Router>
   );
