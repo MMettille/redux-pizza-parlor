@@ -73,8 +73,8 @@ Reducer Names:
     [ x ] npm install react-router-dom
     [ x ] Make Components
     [ ] IN APP
-        [ ] Import {Route, HashRouter as Router} from 'react-router-dom'
-        [ ] Wrap the app in a <Router>
+        [ x ] Import {Route, HashRouter as Router} from 'react-router-dom'
+        [ x ] Wrap the app in a <Router>
         [ ] Admin or Client?
             [ ] Client
                 [ ] Make Routes through the different pages
