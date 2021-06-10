@@ -2,7 +2,7 @@
 [ ] need to delete pizza selection
 [ ] need to store customer info
 
-[ Home ]
+[ Home ] - Chris
     [ ] Display the options
         [ ] GET REQUEST
     [ ] Adding a pizza to the cart (BUTTON)
@@ -12,12 +12,12 @@
          [ ] When the pizza is added to the cart, the total will need to update in the top right corner
          [ ] Save selection in redux
          [ ] Next button -> will navigate you to step #2 and save to redux
-[ customerInfo ]
+[ customerInfo ] - Mary
     [ ] Inputs for *name*, *street address*, *city*, and *zip*
     [ ] Radio Selection for pickup vs delivery
     [ ] Grab the inputs and selection for delivery, save the inputs in redux
     [ ] Next button -> will navigate you to step #3 and save to redux
-[ checkout ]
+[ checkout ] - Oliva
     [ ] Grab the customers info and display on left
     [ ] Grab the customers delivery selection and display on right
     [ ] Make a table for menu selection and price
@@ -32,9 +32,12 @@
         [ ] Reset the table
         [ ] Bounce back to home screen
         
-[ admin ] !!! - user will need to go to localhost:3000/admin
+[ admin ] - James
+!!! - user will need to go to localhost:3000/admin
     [ ] Will need to make a get route to './admin'
     [ ] Create table - headers: *name*, *Time Order Placed*, *Type* (delivery or pickup), and *Cost*
+
+[ total ??? ] - James
 
 
 [ SET UP ]
