@@ -3,8 +3,8 @@
 [ ] need to store customer info
 
 [ Home ] - Chris
-    [ ] Display the options
-        [ ] GET REQUEST
+    [x] Display the options
+        [x] GET REQUEST
     [ ] Adding a pizza to the cart (BUTTON)
         [ ] Client facing -> that needs to go to redux in a store
          - Needs to be an array of objects of: *, *name*, *description*, *image_path* and *cost* properties. 
