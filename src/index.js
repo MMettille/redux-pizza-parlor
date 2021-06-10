@@ -3,4 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// ⬇ What we need to import
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+import {Provider} from 'react-redux';
+import logger from 'redux-logger';
+
+// ⬇ Creating our store
+const store = createStore(
+    combineReducers({
+      // ⬇ Reducers go here
+    }),
+    applyMiddleware(
+      logger
+    )
+)
+ReactDOM.render(
+    <React.StrictMode>
+        <Provider store={store}>
+        <App />
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+);

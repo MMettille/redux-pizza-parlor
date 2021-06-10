@@ -81,16 +81,18 @@ Reducer Names:
             [ ] Admin
                 [ ] Make Routes through the different pages
     [ ] IN INDEX.JS 
-        [ ] import {createStore, combineReducers, applyMiddleware} from 'redux';
-        [ ] import {Provider} from 'react-redux';
-        [ ] import logger from 'redux-logger';
+        [ x ] import {createStore, combineReducers, applyMiddleware} from 'redux';
+        [ x ] import {Provider} from 'react-redux';
+        [ x ] import logger from 'redux-logger';
         [ ] Create Store
             [ ] Wrap with combineReducers
                 [ ] Pass in reducers
             [ ] applyMiddleware
                 [ ] logger
         [ ] React.DOM.render
+            [ ] React.StrictMode?
             [ ] Wrap the app in a <Provider> and give the provider a store -> <Provider store={store}>
+            [ ] Service Worker?
 
 
 
