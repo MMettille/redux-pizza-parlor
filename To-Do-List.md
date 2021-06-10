@@ -17,15 +17,16 @@ Component Names:
 </Route>
 
 <Route path="/checkout">
-    <SelectedPizzaList /> (WILL HAVE CUSTOMER INFO, TABLE)
-        <SelectedPizzaListItem />
+    <CheckoutList /> (WILL HAVE CUSTOMER INFO, TABLE)
+        <CheckoutListItem />
     Total
     <Checkout />
 </Route>
     
-    
-    <Header />
-    <Home />
+ADMIN!!!
+
+<AdminList />
+    <AdminListItem />
 
 Reducer Names:
 
