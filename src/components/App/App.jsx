@@ -38,11 +38,10 @@ function App() {
             <CheckoutList />  
         </Route>
             
-        {/* <Route path='/admin'>
+        <Route path='/admin'>
           <AdminList />
-            <AdminListItem />
             </Route>
-             */}
+            
       </div>
     </Router>
   );
