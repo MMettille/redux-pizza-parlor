@@ -30,8 +30,38 @@ ADMIN!!!
 
 Reducer Names:
 
+const customerOrder = (state = [], action) => {
+    if(action.type === 'ADD_PIZZA'){
+        console.log(action.payload)
+        return [...state, action.payload]
+    }
+    if(action.type === 'REMOVE_PIZZA'){
+        console.log(action.payload)
+        const matchPizza = employee => employee.idNumber !== action.payload.idNumber;
+        return state.filter(matchPizza)
+    }
+    if(action.type === 'REMOVE_ORDER'){
+        return []
+    }
+    return state;
+}
+
+const customerInfo = (state = [], action) => {
+    if(action.type === 'ADD_CUSTOMER){
+        console.log(action.payload)
+        return [...state, action.payload]
+    }
+    if(action.type === 'REMOVE_CUSTOMER'){
+        return []
+    }
+}
+
+{OBJECT OF PERSON'S ORDER} is ordering: {PIZZA INFO}
 
 
+[ ] need to add pizza selection 
+[ ] need to delete pizza selection
+[ ] need to store customer info
 
 [ Home ]
     [ ] Display the options
@@ -56,11 +86,13 @@ Reducer Names:
     [ ] Display the total of their cart
     [ ] On Checkout button click:
         [ ] Show confirmation
-        [ ] Post to database
+        [ ] Post to database 
+            [ ] **Post Data** should be an object that contains user information, *customer name*, *street address*, *city*, *zip*, *order_total* and an array of pizza id's as object. 
         [ ] Clear the cart
         [ ] Clear the user's information / delivery selection
         [ ] Reset the table
         [ ] Bounce back to home screen
+        
 [ admin ] !!! - user will need to go to localhost:3000/admin
     [ ] Will need to make a get route to './admin'
     [ ] Create table - headers: *name*, *Time Order Placed*, *Type* (delivery or pickup), and *Cost*
