@@ -2,17 +2,27 @@ import axios from 'axios';
 import {useDispatch} from 'react-redux';
 
 
-function PizzaListItem() {
+function PizzaListItem({foodItem}) {
 
-    const 
-    const dispatch = useDispatch();
 
-    const displayOptions = () => {
-        axios({
-            method: 'GET',
-            url: '/api/pizza'
-        }).then(response => {
-            
-        })
-    }
+    // const dispatch = useDispatch();
+
+    
+
+    return (
+        <div>
+            //put these in tags of choice for looks
+            {foodItem.name}
+            {foodItem.description}
+            {foodItem.price}
+            {foodItem.image_path}
+
+            <button type="submit">Add Pizza</button>
+
+        </div>
+    )
 }
+
+
+
+export default PizzaListItem;
