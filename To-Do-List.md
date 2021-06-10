@@ -66,12 +66,12 @@ Reducer Names:
 
 
 [ SET UP ]
-    [ ] npm install
-    [ ] npm install redux 
-    [ ] npm install react-redux
-    [ ] npm install redux-logger
-    [ ] npm install react-router-dom
-    [ ] Make Components
+    [ x ] npm install
+    [ x ] npm install redux 
+    [ x ] npm install react-redux
+    [ x ] npm install redux-logger
+    [ x ] npm install react-router-dom
+    [ x ] Make Components
     [ ] IN APP
         [ ] Import {Route, HashRouter as Router} from 'react-router-dom'
         [ ] Wrap the app in a <Router>
@@ -91,7 +91,7 @@ Reducer Names:
                 [ ] logger
         [ ] React.DOM.render
             [ ] Wrap the app in a <Provider> and give the provider a store -> <Provider store={store}>
-            
+
 
 
 
