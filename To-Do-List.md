@@ -1,64 +1,3 @@
-Route Names - 
-Route 1 - HOME "/"
-Route 2 - CustomerInfo "/customerInfo"
-Route 3 - Checkout "/checkout"
-
-Component Names:
-
-<Header />
-    ??? <PizzaTotal />
-<Route path="/" exact>
-    <PizzaList />
-        <PizzaItem />
-</Route>
-
-<Route path="/customerInfo">
-    <PizzaForm />
-</Route>
-
-<Route path="/checkout">
-    <CheckoutList /> (WILL HAVE CUSTOMER INFO, TABLE)
-        <CheckoutListItem />
-    Total
-    <Checkout />
-</Route>
-    
-ADMIN!!!
-
-<AdminList />
-    <AdminListItem />
-
-Reducer Names:
-
-const customerOrder = (state = [], action) => {
-    if(action.type === 'ADD_PIZZA'){
-        console.log(action.payload)
-        return [...state, action.payload]
-    }
-    if(action.type === 'REMOVE_PIZZA'){
-        console.log(action.payload)
-        const matchPizza = employee => employee.idNumber !== action.payload.idNumber;
-        return state.filter(matchPizza)
-    }
-    if(action.type === 'REMOVE_ORDER'){
-        return []
-    }
-    return state;
-}
-
-const customerInfo = (state = [], action) => {
-    if(action.type === 'ADD_CUSTOMER){
-        console.log(action.payload)
-        return [...state, action.payload]
-    }
-    if(action.type === 'REMOVE_CUSTOMER'){
-        return []
-    }
-}
-
-{OBJECT OF PERSON'S ORDER} is ordering: {PIZZA INFO}
-
-
 [ ] need to add pizza selection 
 [ ] need to delete pizza selection
 [ ] need to store customer info
@@ -72,12 +11,12 @@ const customerInfo = (state = [], action) => {
          [ ] Add button will become a remove button
          [ ] When the pizza is added to the cart, the total will need to update in the top right corner
          [ ] Save selection in redux
-         [ ] Next button -> will bump you to step #2
+         [ ] Next button -> will navigate you to step #2 and save to redux
 [ customerInfo ]
     [ ] Inputs for *name*, *street address*, *city*, and *zip*
     [ ] Radio Selection for pickup vs delivery
     [ ] Grab the inputs and selection for delivery, save the inputs in redux
-    [ ] Next button -> will bump you to step #3
+    [ ] Next button -> will navigate you to step #3 and save to redux
 [ checkout ]
     [ ] Grab the customers info and display on left
     [ ] Grab the customers delivery selection and display on right

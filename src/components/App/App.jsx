@@ -26,6 +26,29 @@ function App() {
         <img src='images/pizza_photo.png' />
         <p>Pizza is great.</p>
       
+        <Header />
+    
+        <Route path="/" exact>
+            <PizzaList />
+                <PizzaItem />
+        </Route>
+
+        <Route path="/customerInfo">
+            <PizzaForm />
+        </Route>
+
+        <Route path="/checkout">
+            <CheckoutList />
+                <CheckoutListItem />
+            
+            <Checkout />
+        </Route>
+            
+        <Route path='/admin'>
+          <AdminList />
+            <AdminListItem />
+            </Route>
+            
       </div>
     </Router>
     
