@@ -1,9 +1,9 @@
-import React from 'react';
-import axios from 'axios';
-import './App.css';
+import React from "react";
+import axios from "axios";
+import "./App.css";
 
 // ⬇ What we need to import
-import {Route, HashRouter as Router} from 'react-router-dom'
+import { Route, HashRouter as Router } from "react-router-dom";
 
 // ⬇ Importing components
 import AdminList from '../AdminList/AdminList';
@@ -43,14 +43,14 @@ function App() {
 
   return (
     <Router>
-      <div className='App'>
-      <header className='App-header'>
-          <h1 className='App-title'>Prime Pizza</h1>
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">Prime Pizza</h1>
         </header>
-    
-        <img src='images/pizza_photo.png' />
+
+        <img src="images/pizza_photo.png" />
         <p>Pizza is great.</p>
-      
+
         <Header />
     
         <Route path="/" exact>
@@ -62,16 +62,14 @@ function App() {
         </Route>
 
         <Route path="/checkout">
-            <CheckoutList />
+            <CheckoutList />  
         </Route>
-            
-        <Route path='/admin'>
+
+        <Route path="/admin">
           <AdminList />
         </Route>
-            
       </div>
     </Router>
-    
   );
 }
 
