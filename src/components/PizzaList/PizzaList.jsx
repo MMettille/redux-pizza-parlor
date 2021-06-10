@@ -1,29 +1,19 @@
-import PizzaListItem from '../PizzaList/PizzaList';
-import axios from 'axios';
-import {useState} from 'react';
+import PizzaListItem from '../PizzaListItem/PizzaListItem';
+// import axios from 'axios';
+// import {useState} from 'react';
+import {useSelector} from 'react-redux';
 
 function PizzaList() {
 
-    const [pizzas, setPizzas] = useState();
+    // const [pizzas, setPizzas] = useState();
+    const pizzas = useSelector(store => store.pizzas);
 
-    const getOptions = () => {
-        axios({
-            method: 'GET',
-            url: '/api/pizza'
-        }).then(response => { //response is array of food options
-            console.log(response.data);
-            setPizzas(response.data);
-        }).catch(error => {
-            console.log('error in pizzalistitem get', error);
-        })
-    }
-
-    return(
+    return (
         <>
         
             {pizzas.map((foodItem, i) => {
                 return <PizzaListItem key={i} foodItem={foodItem} />
-            })};
+            })}
         </>
     )
 }

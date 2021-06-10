@@ -11,11 +11,11 @@ function PizzaListItem({foodItem}) {
 
     return (
         <div>
-            //put these in tags of choice for looks
-            {foodItem.name}
+            {/* put these in tags of choice for looks */}
+            <p>{foodItem.name}
             {foodItem.description}
             {foodItem.price}
-            {foodItem.image_path}
+            {foodItem.image_path}</p>
 
             <button type="submit">Add Pizza</button>
 
