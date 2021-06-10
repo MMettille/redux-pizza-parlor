@@ -62,6 +62,7 @@ Reducer Names:
         [ ] Reset the table
         [ ] Bounce back to home screen
 [ admin ] !!! - user will need to go to localhost:3000/admin
+    [ ] Will need to make a get route to './admin'
     [ ] Create table - headers: *name*, *Time Order Placed*, *Type* (delivery or pickup), and *Cost*
 
 
@@ -72,6 +73,11 @@ Reducer Names:
     [ x ] npm install redux-logger
     [ x ] npm install react-router-dom
     [ x ] Make Components
+    [  ] Material UI ?
+        [ x ] npm install @material-ui/core
+        [ x ] npm install @material-ui/icons
+    [ x ] Bootstrap ?
+        [ x ] npm install react-bootstrap bootstrap@4.6.0
     [ ] IN APP
         [ x ] Import {Route, HashRouter as Router} from 'react-router-dom'
         [ x ] Wrap the app in a <Router>
