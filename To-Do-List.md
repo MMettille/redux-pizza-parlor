@@ -1,0 +1,88 @@
+Route Names - 
+Route 1 - HOME "/"
+Route 2 - CustomerInfo "/customerInfo"
+Route 3 - Checkout "/checkout"
+
+Component Names:
+
+<Header />
+    ??? <PizzaTotal />
+<Route path="/" exact>
+    <PizzaList />
+        <PizzaItem />
+</Route>
+
+<Route path="/customerInfo">
+    <PizzaForm />
+</Route>
+
+<Route path="/checkout">
+    <SelectedPizzaList /> (WILL HAVE CUSTOMER INFO, TABLE)
+        <SelectedPizzaListItem />
+    Total
+    <Checkout />
+</Route>
+    
+    
+    <Header />
+    <Home />
+
+Reducer Names:
+
+
+
+
+[ Home ]
+    [ ] Display the options
+        [ ] GET REQUEST
+    [ ] Adding a pizza to the cart (BUTTON)
+        [ ] Client facing -> that needs to go to redux in a store
+         - Needs to be an array of objects of: *, *name*, *description*, *image_path* and *cost* properties. 
+         [ ] Add button will become a remove button
+         [ ] When the pizza is added to the cart, the total will need to update in the top right corner
+         [ ] Save selection in redux
+         [ ] Next button -> will bump you to step #2
+[ customerInfo ]
+    [ ] Inputs for *name*, *street address*, *city*, and *zip*
+    [ ] Radio Selection for pickup vs delivery
+    [ ] Grab the inputs and selection for delivery, save the inputs in redux
+    [ ] Next button -> will bump you to step #3
+[ checkout ]
+    [ ] Grab the customers info and display on left
+    [ ] Grab the customers delivery selection and display on right
+    [ ] Make a table for menu selection and price
+        [ ] headers: *name* and *cost*
+    [ ] Display the total of their cart
+    [ ] On Checkout button click:
+        [ ] Show confirmation
+        [ ] Post to database
+        [ ] Clear the cart
+        [ ] Clear the user's information / delivery selection
+        [ ] Reset the table
+        [ ] Bounce back to home screen
+[ admin ] !!! - user will need to go to localhost:3000/admin
+    [ ] Create table - headers: *name*, *Time Order Placed*, *Type* (delivery or pickup), and *Cost*
+
+
+
+Information will be saved in reducers
+UNTIL the checkout button is clicked. THEN it will be a post to the database.
+
+
+POST DATA model 
+
+{
+  "customer_name": "Donatello",
+  "street_address": "20 W 34th St",
+  "city": "New York",
+  "zip": "10001",
+  "total": "27.98",
+  "type": "Pickup",
+  "pizzas": [{
+    "id": "1",
+    "quantity": "1"
+  },{
+    "id": "2",
+    "quantity": "1"
+  }]
+}
