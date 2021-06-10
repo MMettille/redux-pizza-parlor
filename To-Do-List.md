@@ -84,14 +84,14 @@ Reducer Names:
         [ x ] import {createStore, combineReducers, applyMiddleware} from 'redux';
         [ x ] import {Provider} from 'react-redux';
         [ x ] import logger from 'redux-logger';
-        [ ] Create Store
-            [ ] Wrap with combineReducers
+        [ x ] Create Store
+            [ x ] Wrap with combineReducers
                 [ ] Pass in reducers
-            [ ] applyMiddleware
-                [ ] logger
-        [ ] React.DOM.render
-            [ ] React.StrictMode?
-            [ ] Wrap the app in a <Provider> and give the provider a store -> <Provider store={store}>
+            [ x ] applyMiddleware
+                [ x ] logger
+        [ x ] React.DOM.render
+            [ x ] React.StrictMode?
+            [ x ] Wrap the app in a <Provider> and give the provider a store -> <Provider store={store}>
             [ ] Service Worker?
 
 
