@@ -24,4 +24,5 @@ img {
 .total-cost-container {
   width: 100px;
   background-color: #d32f2f;
+  border-radius: 10px;
 }

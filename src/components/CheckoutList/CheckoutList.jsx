@@ -1,10 +1,19 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-// import CheckoutListItem from '../CheckoutListItem/CheckoutListItem'
 
+import Button from '@material-ui/core/Button';
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
 
-function CheckoutList() {
+import './CheckoutList.css';
+
+function CheckoutList({ TotalCost }) {
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -57,23 +66,6 @@ function CheckoutList() {
                 console.log('error in post', error);
             })
     }
-    // const {
-    //     customer_name,
-    //     street_address,
-    //     city,
-    //     zip,
-    //     type,
-    //     total,
-    //     pizzas
-    // } = req.body;
-
-    // "pizzas": [{
-    //     "id": "1",
-    //     "quantity": "1"
-    //   },{
-    //     "id": "2",
-    //     "quantity": "1"
-    //   }]
 
     const clearAllInputs = () => {
         dispatch({
@@ -88,7 +80,7 @@ function CheckoutList() {
     return (
         <>
             <h2>Checkout</h2>
-            <div>
+            <div className="CheckoutHeader">
                 {customerInfo.map((customerInfo) => (
                     <div>
                         <p>{customerInfo.customer_name}</p>
@@ -98,26 +90,33 @@ function CheckoutList() {
                     </div>
                 ))}
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {customerOrder.map((item) => (
-                        <tr key={item.id}>
-                            <td>{item.name}</td>
-                            <td>${item.price}</td>
-                        </tr>
-                    ))}
-                </tbody>
-
-            </table>
-            <h3>Total: </h3>
-            <button onClick={handleCheckout}>CHECKOUT</button>
-
+            
+            <div>
+                <TableContainer component={Paper}>
+                    <Table aria-label="simple table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Item</TableCell>
+                                <TableCell>Cost</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                        {customerOrder.map((item, i) => (
+                            <TableRow key={i}>
+                                <TableCell>{item.name}</TableCell>
+                                <TableCell>{item.price}</TableCell>
+                            </TableRow>
+                        ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </div>
+            
+            <h3>Total: <TotalCost className="total-cost" />
+            </h3>
+            <div className="checkoutBtn">
+            <Button className="checkoutBtn" onClick={handleCheckout}>CHECKOUT</Button>
+            </div>
         </>
     )
 }

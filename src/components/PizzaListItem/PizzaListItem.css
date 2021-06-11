@@ -12,6 +12,7 @@
 img{
     width: auto;
     height: 175px;
+    border-radius: 5px;
 }
 
 .menu-description{
@@ -21,6 +22,7 @@ img{
     margin: 10px;
     max-width: 225px;
     position: relative;
+    text-align: center;
 }
 
 h2{
@@ -30,6 +32,5 @@ h2{
 }
 
 .addRemoveBtn{
-    
-    vertical-align: bottom;
+    justify-content: bottom;
 }

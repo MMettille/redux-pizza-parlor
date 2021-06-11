@@ -98,8 +98,8 @@ function PizzaForm (){
                         </RadioGroup>
                     </Box>
                 </div>
-                <div>
-                    <Button type="submit" size="large">SAVE</Button>
+                <div className="saveBtn">
+                    <Button className="saveBtn" type="submit" size="large">SAVE</Button>
                 </div>
             </form>
         </>
