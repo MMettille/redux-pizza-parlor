@@ -1,18 +1,9 @@
-.checkoutBtn {
+.checkoutBtn{
     width: 100px;
     height: 59px;
     background-color: #d32f2f;
     border-radius: 10px;
     float: right;
-    margin-right: 28px;
     text-align: center;
-}
-
-h2{
-    margin-right: 28px;
-}
-
-.checkoutHeader {
-    margin-left: 20px;
-
+    vertical-align: bottom;
 }

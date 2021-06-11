@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-// import CheckoutListItem from '../CheckoutListItem/CheckoutListItem'
+
 import Button from '@material-ui/core/Button';
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -80,7 +80,7 @@ function CheckoutList({ TotalCost }) {
     return (
         <>
             <h2>Checkout</h2>
-            <div>
+            <div className="CheckoutHeader">
                 {customerInfo.map((customerInfo) => (
                     <div>
                         <p>{customerInfo.customer_name}</p>
@@ -90,6 +90,7 @@ function CheckoutList({ TotalCost }) {
                     </div>
                 ))}
             </div>
+            
             <div>
                 <TableContainer component={Paper}>
                     <Table aria-label="simple table">
