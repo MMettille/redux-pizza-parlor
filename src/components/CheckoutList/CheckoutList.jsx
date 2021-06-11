@@ -25,6 +25,7 @@ function CheckoutList() {
         return totalCost;
       };
 
+    let totalCost = calculateTotalCost(customerOrder);
 
     // post all pizza order and customer info to server/db 
     // clear all reducers, auto nav back to home page
@@ -42,17 +43,9 @@ function CheckoutList() {
                 city: customerInfo[0].city,
                 zip: customerInfo[0].zip,
                 type: customerInfo[0].type,
-                total: 30.30,
+                total: totalCost,
                 // customerOrder should already be an array of objects
                 pizzas: customerOrder
-                // customer_name: 'olivia',
-                // street_address: 'adasdf',
-                // city: 'adasdf',
-                // zip: 55432,
-                // type: 'Pickup',
-                // total: 30.30,
-                // // customerOrder should already be an array of objects
-                // pizzas: customerOrder
             }
         })
             .then(response => {
