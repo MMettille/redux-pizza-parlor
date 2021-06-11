@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 
 
 function PizzaListItem({foodItem}) {
-
     const [added, setAdded] = useState(false);
 
     const dispatch = useDispatch();
@@ -14,7 +13,10 @@ function PizzaListItem({foodItem}) {
     const addItem = (foodItem) => {
         dispatch({
             type: 'ADD_PIZZA',
-            payload: foodItem
+            payload: {
+                pizza_id: foodItem.id,
+                quantity: 1
+            }
         }) 
         setAdded(true)
     } 
