@@ -1,11 +1,11 @@
-
 .App-header {
-    background-color: #222;
-    height: 70px;
-    padding: 20px;
-    color: white;
-    margin-bottom: 20px;
-    display: block;
+  background-color: #222;
+  height: 70px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .App-title {
@@ -17,8 +17,11 @@ img {
   width: auto;
 }
 
-.image-header{
+.image-header {
   text-align: center;
 }
 
-  
+.total-cost-container {
+  width: 100px;
+  background-color: #d32f2f;
+}

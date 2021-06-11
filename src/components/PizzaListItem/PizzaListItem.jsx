@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 function PizzaListItem({foodItem}) {
     const [added, setAdded] = useState(false);
 
+
     const dispatch = useDispatch();
 
     const addItem = (foodItem) => {
@@ -29,6 +30,7 @@ function PizzaListItem({foodItem}) {
         setAdded(false)
     } 
 
+        
     return (
         
                 <div className="menu-box">
@@ -55,7 +57,7 @@ function PizzaListItem({foodItem}) {
     )
 }
 
-
+//to customer info - import {useHistory} from "react-router-dom" --> history.push('/url')
 
 export default PizzaListItem;
 
