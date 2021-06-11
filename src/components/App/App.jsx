@@ -45,8 +45,8 @@ function App() {
     <Router>
       <div className='App'>
            
-        <Header />
-    
+        <Header TotalCost={TotalCost}/>
+        <TotalCost/>
         <Route path="/" exact>
             <PizzaList />
         </Route>

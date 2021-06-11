@@ -1,11 +1,10 @@
-
 .App-header {
-    background-color: #222;
-    height: 70px;
-    padding: 20px;
-    color: white;
-    margin-bottom: 20px;
-    display: block;
+  background-color: #222;
+  height: 70px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+  display: block;
 }
 
 .App-title {
@@ -17,8 +16,7 @@ img {
   width: auto;
 }
 
-.image-header{
+.image-header {
   text-align: center;
 }
 
-  
