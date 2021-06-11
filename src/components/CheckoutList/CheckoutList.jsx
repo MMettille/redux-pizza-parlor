@@ -1,12 +1,32 @@
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import {useHistory} from 'react-router-dom';
+import axios from 'axios';
 // import CheckoutListItem from '../CheckoutListItem/CheckoutListItem'
 
 
 function CheckoutList() {
 
+    const history = useHistory();
     const customerOrder = useSelector(store => store.customerOrder);
 
     const customerInfo = useSelector(store => store.customerInfo);
+
+    
+    const handleCheckout = (event) => {
+        event.preventDefault();
+        console.log('in checkout')
+
+        history.push('/');
+
+    }
+
+    const postOrder = () => {
+        axios({
+            method: 'POST',
+            url: '/'
+        })
+    }
+
 
     return (
         <>
@@ -37,7 +57,7 @@ function CheckoutList() {
 
             </table>
             <h3>Total: </h3>
-            <button>CHECKOUT</button>
+            <button onClick={handleCheckout}>CHECKOUT</button>
 
         </>
     )

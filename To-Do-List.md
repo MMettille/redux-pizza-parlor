@@ -30,7 +30,7 @@
         [ ] Clear the cart
         [ ] Clear the user's information / delivery selection
         [ ] Reset the table
-        [ ] Bounce back to home screen
+        [x] Bounce back to home screen
         
 [ admin ] - James
 !!! - user will need to go to localhost:3000/admin
