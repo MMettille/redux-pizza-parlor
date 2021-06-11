@@ -32,10 +32,10 @@ function PizzaForm (){
 
         console.log(`clicked!`)
         dispatch({type: 'ADD_CUSTOMER', payload: {
-            name: name,
-            streetAddress: streetAddress,
+            customer_name: name,
+            street_address: streetAddress,
             city: city,
-            zipCode: zipCode,
+            zip: zipCode,
             type: preference
         }})
         clearCustomerFields();
