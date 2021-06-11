@@ -18,7 +18,7 @@ function CheckoutList() {
     const handleCheckout = (event) => {
         event.preventDefault();
         console.log('in checkout')
-
+        console.log('log ')
         axios({
             method: 'POST',
             url: '/api/order',
@@ -33,14 +33,14 @@ function CheckoutList() {
                 pizza: customerOrder
             }
         })
-        .then(response => {
-            history.push('/');
-            console.log('response in post', response)
-            clearAllInputs();
-        })
-        .catch(error => {
-            console.log('error in post', error);
-        })
+            .then(response => {
+                history.push('/');
+                console.log('response in post', response)
+                clearAllInputs();
+            })
+            .catch(error => {
+                console.log('error in post', error);
+            })
     }
     // const {
     //     customer_name,
@@ -74,10 +74,14 @@ function CheckoutList() {
         <>
             <h2>Checkout</h2>
             <div>
-                <p>{customerInfo.customer_name}</p>
-                <p>{customerInfo.street_address}</p>
-                <p>{customerInfo.city}, MN {customerInfo.zip}</p>
-                <p>For {customerInfo.type}</p>
+                {customerInfo.map((customerInfo) => (
+                    <div>
+                        <p>{customerInfo.customer_name}</p>
+                        <p>{customerInfo.street_address}</p>
+                        <p>{customerInfo.city}, MN {customerInfo.zip}</p>
+                        <p>For {customerInfo.type}</p>
+                    </div>
+                ))}
             </div>
             <table>
                 <thead>
