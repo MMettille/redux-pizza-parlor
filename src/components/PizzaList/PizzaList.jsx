@@ -30,7 +30,7 @@ function PizzaList() {
             })}
 
             <button onClick={goNext}>Next Page</button>
-
+        </Box>
         </>
     )
 }
