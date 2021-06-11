@@ -7,7 +7,7 @@ _Duration: 1.5 Day Sprint_
 Order your favorite pizza from our new restaurant!
 
 ## Screen Shot
-![Image of pizza menu with button to select, running total, and next button](./screen_shot.png)
+![Image of pizza menu with button to select, running total, and next button](./home_screen.png)
 
 ### Prerequisites
 
