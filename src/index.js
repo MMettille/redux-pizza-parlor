@@ -38,7 +38,7 @@ const customerOrder = (state = [], action) => {
 
 const customerInfo = (state = [], action) => {
   if(action.type === 'ADD_CUSTOMER'){
-    console.log(action.payload)
+    console.log(action.payload);
     return [...state, action.payload]
   }
   if(action.type === 'REMOVE_CUSTOMER'){
