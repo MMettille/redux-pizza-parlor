@@ -18,10 +18,10 @@
     [ ] Grab the inputs and selection for delivery, save the inputs in redux
     [ ] Next button -> will navigate you to step #3 and save to redux
 [ checkout ] - Oliva
-    [ ] Grab the customers info and display on left
-    [ ] Grab the customers delivery selection and display on right
-    [ ] Make a table for menu selection and price
-        [ ] headers: *name* and *cost*
+    [X] Grab the customers info and display on left
+    [X] Grab the customers delivery selection and display on right
+    [X] Make a table for menu selection and price
+        [X] headers: *name* and *cost*
     [ ] Display the total of their cart
     [ ] On Checkout button click:
         [ ] Show confirmation
@@ -50,6 +50,8 @@
     [  ] Material UI ?
         [ x ] npm install @material-ui/core
         [ x ] npm install @material-ui/icons
+        [   ] npm install @fontsource/roboto
+            [  ] import '@fontsource/roboto';
     [ x ] Bootstrap ?
         [ x ] npm install react-bootstrap bootstrap@4.6.0
     [ ] IN APP
