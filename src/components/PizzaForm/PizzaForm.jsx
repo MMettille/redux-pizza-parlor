@@ -4,6 +4,8 @@ import React from 'react'
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+import {useHistory} from 'react-router-dom';
+
 // ⬇ What we need to import from material UI
 import Textfield from '@material-ui/core/TextField';
 import Radio from '@material-ui/core/Radio';
@@ -14,6 +16,8 @@ import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 
 function PizzaForm (){
+
+    const history = useHistory('')
 
     const [name, setName] = useState('');
     const [streetAddress, setStreetAddress] = useState('');
@@ -35,6 +39,7 @@ function PizzaForm (){
             type: preference
         }})
         clearCustomerFields();
+        history.push('/checkout');
     }
 
     const clearCustomerFields = () => {
