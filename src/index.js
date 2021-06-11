@@ -25,7 +25,7 @@ const customerOrder = (state = [], action) => {
   }
   if(action.type === 'REMOVE_PIZZA'){
       console.log(action.payload)
-      const matchPizza = employee => employee.idNumber !== action.payload.idNumber;
+      const matchPizza = order => order.id !== action.payload.id;
       return state.filter(matchPizza)
   }
   if(action.type === 'REMOVE_ORDER'){

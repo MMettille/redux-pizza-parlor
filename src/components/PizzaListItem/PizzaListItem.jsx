@@ -7,6 +7,7 @@ function PizzaListItem({foodItem}) {
 
     const [added, setAdded] = useState(false);
 
+
     const dispatch = useDispatch();
 
     const addItem = (foodItem) => {
@@ -25,6 +26,7 @@ function PizzaListItem({foodItem}) {
         setAdded(false)
     } 
 
+        
     return (
         <div>
             {/* put these in tags of choice for looks */}
@@ -42,12 +44,11 @@ function PizzaListItem({foodItem}) {
                     <button onClick={() => removeItem(foodItem)}>Remove Pizza</button>
                     )}
             </div>
-
         </div>
     )
 }
 
-
+//to customer info - import {useHistory} from "react-router-dom" --> history.push('/url')
 
 export default PizzaListItem;
 
