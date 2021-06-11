@@ -12,7 +12,7 @@ function TotalCost() {
     When the reduce is complete, it passes the final sum to the reduce function.
     The sum of all the things is returned to who called reduce!
     */
-    const pizzas = (sum, pizza) => sum + Number(pizza.cost);
+    const pizzas = (sum, pizza) => sum + Number(pizza.price);
 
     /* 
     Reduce is an array method, like .map()
