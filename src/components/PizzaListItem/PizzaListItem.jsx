@@ -15,7 +15,9 @@ function PizzaListItem({foodItem}) {
         dispatch({
             type: 'ADD_PIZZA',
             payload: {
-                pizza_id: foodItem.id,
+                name: foodItem.name,
+                price: foodItem.price,
+                id: foodItem.id,
                 quantity: 1
             }
         }) 
