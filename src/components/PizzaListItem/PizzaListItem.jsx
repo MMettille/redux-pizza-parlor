@@ -7,6 +7,7 @@ function PizzaListItem({foodItem}) {
 
     const [added, setAdded] = useState(false);
 
+
     const dispatch = useDispatch();
 
     const addItem = (foodItem) => {
@@ -25,6 +26,7 @@ function PizzaListItem({foodItem}) {
         setAdded(false)
     } 
 
+        
     return (
         <div>
             {/* put these in tags of choice for looks */}
@@ -42,7 +44,6 @@ function PizzaListItem({foodItem}) {
                     <button onClick={() => removeItem(foodItem)}>Remove Pizza</button>
                     )}
             </div>
-
         </div>
     )
 }
