@@ -13,7 +13,12 @@ function PizzaListItem({foodItem}) {
     const addItem = (foodItem) => {
         dispatch({
             type: 'ADD_PIZZA',
-            payload: foodItem
+            payload: {
+                name: foodItem.name,
+                price: foodItem.price,
+                id: foodItem.id,
+                quantity: 1
+            }
         }) 
         setAdded(true)
     } 

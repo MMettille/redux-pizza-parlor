@@ -12,6 +12,19 @@ function CheckoutList() {
     // reducers
     const customerOrder = useSelector(store => store.customerOrder);
     const customerInfo = useSelector(store => store.customerInfo);
+    // console.log('customerInfo', customerInfo[0]);
+    // console.log('please be customer name', customerInfo[0].customer_name)
+
+
+    const calculateTotalCost = (customerOrder) => {
+
+        const pizzas = (sum, pizza) => sum + Number(pizza.price);
+
+        const totalCost = customerOrder.reduce(pizzas, 0);
+        console.log(totalCost);
+        return totalCost;
+      };
+
 
     // post all pizza order and customer info to server/db 
     // clear all reducers, auto nav back to home page
@@ -19,18 +32,27 @@ function CheckoutList() {
         event.preventDefault();
         console.log('in checkout')
         console.log('log ')
+        
         axios({
             method: 'POST',
             url: '/api/order',
-            DATA: {
-                customer_name: customerOrder.customer_name,
-                street_address: customerInfo.street_address,
-                city: customerInfo.city,
-                zip: customerInfo.zip,
-                type: customerInfo.type,
-                total: customerInfo.total,
+            data: {
+                customer_name: customerInfo[0].customer_name,
+                street_address: customerInfo[0].street_address,
+                city: customerInfo[0].city,
+                zip: customerInfo[0].zip,
+                type: customerInfo[0].type,
+                total: 30.30,
                 // customerOrder should already be an array of objects
-                pizza: customerOrder
+                pizzas: customerOrder
+                // customer_name: 'olivia',
+                // street_address: 'adasdf',
+                // city: 'adasdf',
+                // zip: 55432,
+                // type: 'Pickup',
+                // total: 30.30,
+                // // customerOrder should already be an array of objects
+                // pizzas: customerOrder
             }
         })
             .then(response => {
