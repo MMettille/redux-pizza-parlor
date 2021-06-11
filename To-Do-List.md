@@ -50,6 +50,8 @@
     [  ] Material UI ?
         [ x ] npm install @material-ui/core
         [ x ] npm install @material-ui/icons
+        [   ] npm install @fontsource/roboto
+            [  ] import '@fontsource/roboto';
     [ x ] Bootstrap ?
         [ x ] npm install react-bootstrap bootstrap@4.6.0
     [ ] IN APP
