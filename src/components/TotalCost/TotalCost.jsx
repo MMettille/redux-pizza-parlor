@@ -22,7 +22,7 @@ function TotalCost() {
 
     const totalCost = customerOrder.reduce(pizzas, 0);
     console.log(totalCost);
-    return totalCost;
+    return totalCost.toLocaleString("en-US");
   };
   console.log(customerOrder);
   return (
