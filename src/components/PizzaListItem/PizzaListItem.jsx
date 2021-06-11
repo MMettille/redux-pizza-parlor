@@ -47,7 +47,7 @@ function PizzaListItem({foodItem}) {
     )
 }
 
-
+//to customer info - import {useHistory} from "react-router-dom" --> history.push('/url')
 
 export default PizzaListItem;
 

@@ -5,18 +5,18 @@
 [ Home ] - Chris
     [x] Display the options
         [x] GET REQUEST
-    [ ] Adding a pizza to the cart (BUTTON)
-        [ ] Client facing -> that needs to go to redux in a store
+    [x] Adding a pizza to the cart (BUTTON)
+        [x] Client facing -> that needs to go to redux in a store
          - Needs to be an array of objects of: *, *name*, *description*, *image_path* and *cost* properties. 
-         [ ] Add button will become a remove button
+         [x] Add button will become a remove button
          [ ] When the pizza is added to the cart, the total will need to update in the top right corner
-         [ ] Save selection in redux
+         [x] Save selection in redux
          [ ] Next button -> will navigate you to step #2 and save to redux
 [ customerInfo ] - Mary
-    [ ] Inputs for *name*, *street address*, *city*, and *zip*
-    [ ] Radio Selection for pickup vs delivery
-    [ ] Grab the inputs and selection for delivery, save the inputs in redux
-    [ ] Next button -> will navigate you to step #3 and save to redux
+    [x] Inputs for *name*, *street address*, *city*, and *zip*
+    [x] Radio Selection for pickup vs delivery
+    [x] Grab the inputs and selection for delivery, save the inputs in redux
+    [x] Next button -> will navigate you to step #3 and save to redux
 [ checkout ] - Oliva
     [X] Grab the customers info and display on left
     [X] Grab the customers delivery selection and display on right
@@ -34,8 +34,8 @@
         
 [ admin ] - James
 !!! - user will need to go to localhost:3000/admin
-    [ ] Will need to make a get route to './admin'
-    [ ] Create table - headers: *name*, *Time Order Placed*, *Type* (delivery or pickup), and *Cost*
+    [x] Will need to make a get route to './admin'
+    [x] Create table - headers: *name*, *Time Order Placed*, *Type* (delivery or pickup), and *Cost*
 
 [ total ??? ] - James
 
