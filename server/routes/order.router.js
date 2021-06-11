@@ -24,8 +24,8 @@ router.post('/', async (req, res) => {
             city,
             zip,
             type,
-            total
-            // pizzas
+            total,
+            pizzas
         } = req.body;
         await client.query('BEGIN')
         const orderInsertResults = await client.query(`INSERT INTO "orders" ("customer_name", "street_address", "city", "zip", "type", "total")

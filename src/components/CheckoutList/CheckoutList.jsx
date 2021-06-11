@@ -12,7 +12,7 @@ function CheckoutList() {
     // reducers
     const customerOrder = useSelector(store => store.customerOrder);
     const customerInfo = useSelector(store => store.customerInfo);
-    // console.log('customerInfo', customerInfo[0]);
+    console.log('customerInfo', customerInfo);
     // console.log('please be customer name', customerInfo[0].customer_name)
 
 
