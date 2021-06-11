@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 // import CheckoutListItem from '../CheckoutListItem/CheckoutListItem'
 
@@ -7,26 +7,68 @@ import axios from 'axios';
 function CheckoutList() {
 
     const history = useHistory();
-    const customerOrder = useSelector(store => store.customerOrder);
+    const dispatch = useDispatch();
 
+    // reducers
+    const customerOrder = useSelector(store => store.customerOrder);
     const customerInfo = useSelector(store => store.customerInfo);
 
-    
+    // post all pizza order and customer info to server/db 
+    // clear all reducers, auto nav back to home page
     const handleCheckout = (event) => {
         event.preventDefault();
         console.log('in checkout')
 
-        history.push('/');
-
-    }
-
-    const postOrder = () => {
         axios({
             method: 'POST',
-            url: '/'
+            url: '/api/order',
+            DATA: {
+                customer_name: customerOrder.customer_name,
+                street_address: customerInfo.street_address,
+                city: customerInfo.city,
+                zip: customerInfo.zip,
+                type: customerInfo.type,
+                total: customerInfo.total,
+                // customerOrder should already be an array of objects
+                pizza: customerOrder
+            }
+        })
+        .then(response => {
+            history.push('/');
+            console.log('response in post', response)
+            clearAllInputs();
+        })
+        .catch(error => {
+            console.log('error in post', error);
         })
     }
+    // const {
+    //     customer_name,
+    //     street_address,
+    //     city,
+    //     zip,
+    //     type,
+    //     total,
+    //     pizzas
+    // } = req.body;
 
+    // "pizzas": [{
+    //     "id": "1",
+    //     "quantity": "1"
+    //   },{
+    //     "id": "2",
+    //     "quantity": "1"
+    //   }]
+
+    const clearAllInputs = () => {
+        dispatch({
+            type: 'REMOVE_ORDER',
+        });
+        dispatch({
+            type: 'REMOVE_CUSTOMER'
+        });
+
+    }
 
     return (
         <>
