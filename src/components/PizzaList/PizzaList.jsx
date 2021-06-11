@@ -1,7 +1,6 @@
 import PizzaListItem from '../PizzaListItem/PizzaListItem';
-// import axios from 'axios';
-// import {useState} from 'react';
 import {useSelector} from 'react-redux';
+import Box from '@material-ui/core/Box';
 import {useHistory} from 'react-router-dom';
 
 
@@ -20,7 +19,12 @@ function PizzaList() {
 
     return (
         <>
-        
+        <Box
+            display="flex"
+            
+            flexWrap="wrap"
+            m={2}
+            p={2}>
             {pizzas.map((foodItem, i) => {
                 return <PizzaListItem key={i} foodItem={foodItem} />
             })}
