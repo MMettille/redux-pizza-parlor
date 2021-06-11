@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 function TotalCost() {
   const customerOrder = useSelector((store) => store.customerOrder);
-
   const calculateTotalCost = (customerOrder) => {
     /*
     This is the callback used by reduce
@@ -20,15 +19,17 @@ function TotalCost() {
     The 0 is the starting value -- every call to employeeSalary() increases that value
     by the employees annual salary.
     */
-   
+
     const totalCost = customerOrder.reduce(pizzas, 0);
+    console.log(totalCost);
     return totalCost;
   };
-
+  console.log(customerOrder);
   return (
-    <>
-      <ShoppingCartIcon>${calculateTotalCost(customerOrder)}</ShoppingCartIcon>
-    </>
+    <p>
+      <ShoppingCartIcon /> ${calculateTotalCost(customerOrder)}
+
+    </p>
   );
 }
 
