@@ -30,8 +30,7 @@ function App() {
     axios({
         method: 'GET',
         url: '/api/pizza'
-    }).then(response => { //response is array of food options
-        console.log(response.data);
+    }).then(response => {
         dispatch({
             type: 'SHOW_PIZZAS',
             payload: response.data
