@@ -55,7 +55,7 @@ function App() {
         </Route>
 
         <Route path="/checkout">
-            <CheckoutList />  
+            <CheckoutList TotalCost={TotalCost}/>  
         </Route>
             
         <Route path='/admin'>
