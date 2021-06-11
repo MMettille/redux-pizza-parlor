@@ -4,7 +4,8 @@
   padding: 20px;
   color: white;
   margin-bottom: 20px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
 }
 
 .App-title {
@@ -20,3 +21,7 @@ img {
   text-align: center;
 }
 
+.total-cost-container {
+  width: 100px;
+  background-color: #d32f2f;
+}
