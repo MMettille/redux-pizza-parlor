@@ -51,8 +51,6 @@ function CheckoutList() {
                             <td>${item.price}</td>
                         </tr>
                     ))}
-
-                    {/* <CheckoutListItem /> */}
                 </tbody>
 
             </table>
