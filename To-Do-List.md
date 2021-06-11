@@ -11,7 +11,7 @@
          [x] Add button will become a remove button
          [ ] When the pizza is added to the cart, the total will need to update in the top right corner
          [x] Save selection in redux
-         [ ] Next button -> will navigate you to step #2 and save to redux
+         [x] Next button -> will navigate you to step #2 and save to redux
 [ customerInfo ] - Mary
     [x] Inputs for *name*, *street address*, *city*, and *zip*
     [x] Radio Selection for pickup vs delivery
