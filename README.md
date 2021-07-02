@@ -34,4 +34,4 @@ Order your favorite pizza from our new restaurant!
 - Material UI
 
 ## Acknowledgement
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped us to make this application a reality. A huge shoutout to Dane, our instructor, you taught me so much!
+Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped us to make this application a reality. A huge shoutout to Dane, our instructor, you taught us so much!
